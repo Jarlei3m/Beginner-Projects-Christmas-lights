@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    /* background-color: #f9f9f9;
+    background-image: linear-gradient(315deg, #f9f9f9 0%, #02a388 74%); */
+
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+header .light {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+
+    background-color: rgb(104, 104, 104);
+
+    position: relative;
+}
+
+header input[type='color'] {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    cursor: pointer;
+}
+
+header.on input[type='color'] {
+    visibility: visible;
+    height: 56px;
+    width: 56px;
+
+    border: none;
+    border-radius: 50%;
+
+}
+
+header.on .bright {
+    transition: 0.3s ease-out;
+}
+
+header.on {
+    transition: 0.3s;
+}
+
+header.on .red {
+    background-color: red;
+}
+
+header.on .red.bright {
+    background-color: rgb(255, 29, 29);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px red;
+}
+
+header.on .orange {
+    background-color: orangered;
+}
+
+header.on .orange.bright {
+    background-color: rgb(247, 98, 44);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px orangered;
+}
+
+header.on .yellow {
+    background-color: yellow;
+}
+
+header.on .yellow.bright {
+    background-color: rgb(250, 250, 41);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px yellow;
+}
+
+header.on .green {
+    background-color: green;
+}
+
+header.on .green.bright {
+    background-color: rgb(20, 124, 20);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px green;
+}
+
+header.on .blue {
+    background-color: blue;
+}
+
+header.on .blue.bright {
+    background-color: rgb(44, 44, 253);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px blue;
+}
+
+header.on .indigo {
+    background-color: indigo;
+}
+
+header.on .indigo.bright {
+    background-color: rgb(83, 18, 129);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px indigo;
+}
+
+header.on .violet {
+    background-color: violet;
+}
+
+header.on .violet.bright {
+    background-color: rgb(236, 160, 236);
+    box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px violet;
+}
+
+header .wire {
+    height: 1px;
+    width: 82px;
+    background-color: rgb(109, 109, 109);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    height: 100%;
+}
+
+.title {
+    color: white;
+
+    font-size: 36px;
+    font-weight: bold;
+
+    margin-bottom: 16px;
+
+}
+
+section .start-stop,
+section .input-block {
+    justify-self: center;
+}
+
+section .input-block {
+    margin-bottom: 16px;
+
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+small {
+    font-size: 12px;
+}
+
+.time {
+    width: 80px;
+    height: 45px;
+    border: none;
+
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    padding: 4px;
+    outline: none;
+    caret-color: green;
+
+    text-align: center;
+}
+
+.start, 
+.stop {
+    border: none;
+    background-color: rgb(68, 92, 196);
+
+    padding: 8px 16px;
+    border-radius: 3px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.stop {
+    background-color: rgb(204, 35, 30);
+}
+
+.start:hover {
+    background-color: rgb(52, 78, 194);
+    transition: all 0.2s ease-out;
+}
+
+.stop:hover {
+    background-color: rgb(202, 55, 50);
+    transition: all 0.2s ease-out;
+}
