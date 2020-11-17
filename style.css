@@ -13,9 +13,6 @@ body {
     height: 100vh;
     width: 100vw;
 
-    /* background-color: #f9f9f9;
-    background-image: linear-gradient(315deg, #f9f9f9 0%, #02a388 74%); */
-
     background-color: #166d3b;
     background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
 }
@@ -37,96 +34,69 @@ header .light {
     background-color: rgb(104, 104, 104);
 
     position: relative;
+
+    transition: all 1s ease;
 }
 
-header input[type='color'] {
-    visibility: hidden;
-    opacity: 0;
-
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    cursor: pointer;
-}
-
-header.on input[type='color'] {
-    visibility: visible;
-    height: 56px;
-    width: 56px;
-
-    border: none;
-    border-radius: 50%;
-
-}
-
-header.on .bright {
-    transition: 0.3s ease-out;
-}
-
-header.on {
-    transition: 0.3s;
-}
-
-header.on .red {
+.light.on.red {
     background-color: red;
 }
 
-header.on .red.bright {
+.light.on.red.bright {
     background-color: rgb(255, 29, 29);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px red;
 }
 
-header.on .orange {
+.light.on.orange {
     background-color: orangered;
 }
 
-header.on .orange.bright {
+.light.on.orange.bright {
     background-color: rgb(247, 98, 44);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px orangered;
 }
 
-header.on .yellow {
+.light.on.yellow {
     background-color: yellow;
 }
 
-header.on .yellow.bright {
+.light.on.yellow.bright {
     background-color: rgb(250, 250, 41);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px yellow;
 }
 
-header.on .green {
+.light.on.green {
     background-color: green;
 }
 
-header.on .green.bright {
+.light.on.green.bright {
     background-color: rgb(20, 124, 20);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px green;
 }
 
-header.on .blue {
+.light.on.blue {
     background-color: blue;
 }
 
-header.on .blue.bright {
+.light.on.blue.bright {
     background-color: rgb(44, 44, 253);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px blue;
 }
 
-header.on .indigo {
+.light.on.indigo {
     background-color: indigo;
 }
 
-header.on .indigo.bright {
+.light.on.indigo.bright {
     background-color: rgb(83, 18, 129);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px indigo;
 }
 
-header.on .violet {
+.light.on.violet {
     background-color: violet;
 }
 
-header.on .violet.bright {
+.light.on.violet.bright {
     background-color: rgb(236, 160, 236);
     box-shadow: 0px 0px 60px rgba(250, 250, 250, 0.8), 0px 0px 40px violet;
 }
@@ -152,9 +122,10 @@ section {
 
     font-size: 36px;
     font-weight: bold;
+    letter-spacing: 2px;
 
     margin-bottom: 16px;
-
+    text-shadow: 0 0 40px #FFF;
 }
 
 section .start-stop,
